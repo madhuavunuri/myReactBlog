@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter , Routes, Route} from 'react-router-dom';
 import AboutPage from './pages/AboutPage';
 import ArticleListPage from './pages/ArticleListPage';
 import ArticlePage from './pages/ArticlePage';
@@ -6,14 +7,19 @@ import HomePage from './pages/HomePage';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <div id = "page-body">
-        <HomePage/>
-        <AboutPage/>
-        <ArticleListPage/>
-        <ArticlePage/>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/about' element ={<AboutPage/>}/>
+          <Route path='/articles' element = {<ArticleListPage/>}/>
+          <Route path='/articles/:articleId' element = {<ArticlePage/>}/>
+          <ArticlePage/>
+        </Routes>
       </div>
     </div>
+    </BrowserRouter>
   );
 }
 
