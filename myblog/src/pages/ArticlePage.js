@@ -1,8 +1,5 @@
-const ArticlePage = () => 
-{
-    return (
-        <h1>This is ArticlePage</h1>
-    );
-}
+const ArticlePage = () => {
+  return <h1>This is ArticlePage</h1>;
+};
 
 export default ArticlePage;
