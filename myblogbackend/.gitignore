@@ -1,6 +1,6 @@
 # dependencies
 /node_modules
-
+credentials.json
 # misc
 .DS_Store
 .tmp
